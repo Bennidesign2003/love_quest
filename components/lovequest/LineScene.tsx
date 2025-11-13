@@ -4,7 +4,12 @@ import { Button } from '@/components/ui/button';
 import { ChevronRight, Heart } from 'lucide-react';
 import Image from 'next/image';
 
-export default function LineScene({ scene, onNext }) {
+interface Props {
+  scene: any;
+  onNext: () => void;
+}
+
+export default function LineScene({ scene, onNext }: Props) {
   return (
     <motion.div
       initial={{ scale: 0.95, opacity: 0 }}
